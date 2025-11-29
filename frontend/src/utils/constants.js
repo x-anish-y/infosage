@@ -11,6 +11,9 @@ export const VERDICT_COLORS = {
   false: '#ef4444',
   mixed: '#f59e0b',
   unverified: '#6b7280',
+  misleading: '#f59e0b',
+  'out-of-context': '#8b5cf6',
+  satire: '#06b6d4',
 };
 
 export const VERDICT_LABELS = {
@@ -18,6 +21,9 @@ export const VERDICT_LABELS = {
   false: 'FALSE',
   mixed: 'MIXED',
   unverified: 'UNVERIFIED',
+  misleading: 'MISLEADING',
+  'out-of-context': 'OUT OF CONTEXT',
+  satire: 'SATIRE',
 };
 
 export const SENTIMENT_ICONS = {
