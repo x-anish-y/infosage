@@ -1,0 +1,42 @@
+{
+  "name": "infosage",
+  "displayName": "InfoSage - Fact-Checking Platform",
+  "description": "AI-powered fact-checking and rumor detection application",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" --names BACKEND,FRONTEND --prefix-colors blue,cyan",
+    "dev:backend": "cd backend && node src/server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && echo 'Backend ready for deployment'",
+    "build:frontend": "cd frontend && npm run build",
+    "start": "node backend/src/server.js",
+    "start:prod": "NODE_ENV=production node backend/src/server.js",
+    "seed": "cd backend && node scripts/seed.js",
+    "test": "echo 'Test suite coming soon'",
+    "test:backend": "cd backend && npm run test",
+    "test:frontend": "cd frontend && npm run test",
+    "lint": "echo 'Linting coming soon'"
+  },
+  "keywords": [
+    "fact-checking",
+    "misinformation",
+    "rumor-detection",
+    "ai",
+    "verification",
+    "clustering",
+    "nlp"
+  ],
+  "author": "InfoSage Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourorg/infosage.git"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

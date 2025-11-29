@@ -1,0 +1,37 @@
+{"level":"info","message":"MongoDB connected successfully","service":"infosage-backend","timestamp":"2025-11-29T00:29:13.044Z"}
+{"level":"info","message":"InfoSage backend running on port 4000","service":"infosage-backend","timestamp":"2025-11-29T00:29:13.056Z"}
+{"duration":26,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"u41n66","service":"infosage-backend","status":200,"timestamp":"2025-11-29T00:29:44.234Z"}
+{"duration":7,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"fc9sad","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:29:44.242Z"}
+{"duration":15,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"ybiye","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:29:44.258Z"}
+{"duration":9,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"u9pxbv","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:29:44.269Z"}
+{"duration":21,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"lof3mm","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:29:57.815Z"}
+{"duration":14,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"ja056","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:29:57.836Z"}
+{"duration":20,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"s19q68","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:29:57.870Z"}
+{"duration":17,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"pd0mto","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:29:57.893Z"}
+{"level":"info","message":"✅ OpenAI API key loaded. Using real AI models.","service":"infosage-backend","timestamp":"2025-11-29T00:30:06.679Z"}
+{"level":"info","message":"API Key: sk-proj-a9...","service":"infosage-backend","timestamp":"2025-11-29T00:30:06.680Z"}
+{"level":"info","message":"✅ Embedding generated successfully (REAL AI)","service":"infosage-backend","timestamp":"2025-11-29T00:30:09.102Z"}
+{"duration":2460,"level":"info","message":"Request completed","method":"POST","path":"/","requestId":"fjse67","service":"infosage-backend","status":201,"timestamp":"2025-11-29T00:30:09.136Z"}
+{"claimId":"692a3e91e8990da1c2d58702","level":"info","message":"Starting full analysis","service":"infosage-backend","timestamp":"2025-11-29T00:30:09.137Z"}
+{"level":"info","message":"Using OpenAI API for verdict generation","service":"infosage-backend","timestamp":"2025-11-29T00:30:09.138Z"}
+{"level":"info","message":"OpenAI verdict generated successfully","service":"infosage-backend","timestamp":"2025-11-29T00:30:10.650Z","verdict":"false"}
+{"duration":9,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"3d95gs","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:30:11.153Z"}
+{"duration":13,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"lj0naj","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:30:12.882Z"}
+{"duration":9,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"yz24q9","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:30:12.892Z"}
+{"duration":11,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"1g45hl","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:30:12.904Z"}
+{"duration":11,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"wakobi","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:30:12.916Z"}
+{"count":3,"level":"info","message":"✅ Evidence sources generated (OpenAI)","service":"infosage-backend","timestamp":"2025-11-29T00:30:17.573Z","verdict":"false"}
+{"duration":8,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"1aee","service":"infosage-backend","status":200,"timestamp":"2025-11-29T00:30:19.157Z"}
+{"dataPoints":12,"level":"info","message":"✅ Mention trends generated (OpenAI)","service":"infosage-backend","timestamp":"2025-11-29T00:30:21.311Z","verdict":"false"}
+{"level":"info","message":"✅ Toxicity analysis successful (OpenAI)","risk":"low","service":"infosage-backend","timestamp":"2025-11-29T00:30:22.418Z"}
+{"level":"info","message":"✅ Sentiment analysis successful (OpenAI)","sentiment":"confusion","service":"infosage-backend","timestamp":"2025-11-29T00:30:22.741Z"}
+{"level":"info","message":"✅ Detailed rationale generated (OpenAI)","service":"infosage-backend","timestamp":"2025-11-29T00:30:23.045Z"}
+{"level":"info","message":"✅ Spread velocity analysis successful (OpenAI)","service":"infosage-backend","timestamp":"2025-11-29T00:30:23.820Z","viralPotential":"low"}
+{"level":"info","manipulationType":"misleading","message":"✅ Manipulation analysis successful (OpenAI)","service":"infosage-backend","timestamp":"2025-11-29T00:30:23.822Z"}
+{"claimId":"692a3e91e8990da1c2d58702","level":"info","message":"Analysis completed","sentiment":"confusion","service":"infosage-backend","sources":3,"timestamp":"2025-11-29T00:30:23.845Z","toxicity":10,"verdict":"false"}
+{"claimId":"692a3e91e8990da1c2d58702","clusterId":"692a3e9fe8990da1c2d5875f","level":"info","message":"Cluster created","service":"infosage-backend","timestamp":"2025-11-29T00:30:23.851Z"}
+{"duration":11,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"jjf1ao","service":"infosage-backend","status":200,"timestamp":"2025-11-29T00:30:36.517Z"}
+{"duration":10,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"97az9a","service":"infosage-backend","status":200,"timestamp":"2025-11-29T00:33:10.884Z"}
+{"duration":10,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"k0r1x3","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:33:10.896Z"}
+{"duration":12,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"bcghn","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:33:10.910Z"}
+{"duration":11,"level":"info","message":"Request completed","method":"GET","path":"/","requestId":"9uhgo9","service":"infosage-backend","status":304,"timestamp":"2025-11-29T00:33:10.923Z"}
