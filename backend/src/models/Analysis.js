@@ -9,7 +9,7 @@ const analysisSchema = new mongoose.Schema({
   },
   verdict: {
     type: String,
-    enum: ['true', 'false', 'mixed', 'unverified'],
+    enum: ['true', 'false', 'mixed', 'unverified', 'misleading', 'out-of-context', 'satire'],
     default: 'unverified',
   },
   verdictPercentage: {
@@ -75,14 +75,42 @@ const analysisSchema = new mongoose.Schema({
         enum: ['high', 'medium', 'low'],
       },
       snippet: String,
+      date: String,
     },
   ],
+  // Web search results from AI
+  webSearchResults: {
+    peopleInfo: [{
+      name: String,
+      title: String,
+      verifiedFacts: [String],
+      relevantNews: String,
+    }],
+    imageOrigin: {
+      found: Boolean,
+      originalSource: String,
+      dateFirstSeen: String,
+      previousUsage: [String],
+      isManipulated: Boolean,
+      manipulationDetails: String,
+    },
+    factCheckResults: [{
+      organization: String,
+      verdict: String,
+      url: String,
+      summary: String,
+    }],
+    warnings: [String],
+  },
   charts: {
     riskTrend: [Number],
     mentionsOverTime: [
       {
         t: Date,
         count: Number,
+        sources: Number,
+        engagement: Number,
+        trend: String,
       },
     ],
   },

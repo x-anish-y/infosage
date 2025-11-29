@@ -41,6 +41,54 @@ const claimSchema = new mongoose.Schema({
     type: Number,
     default: 1,
   },
+  // Media/Image analysis data (OpenAI Vision)
+  mediaAnalysis: {
+    hasImage: { type: Boolean, default: false },
+    imagePath: String,
+    ocrText: String,
+    extractedText: String,        // Raw text from image
+    imageDescription: String,      // AI description of image content
+    mainClaim: String,             // AI-identified main claim
+    context: String,               // Additional context detected
+    concerns: [String],            // Red flags or authenticity concerns
+    // Person identification
+    people: [{
+      name: String,
+      role: String,
+      confidence: String,
+      description: String
+    }],
+    objects: [String],             // Identified objects/logos
+    scene: {
+      location: String,
+      event: String,
+      timeframe: String
+    },
+    factCheckContext: String,      // Background info for fact-checking
+    knownFacts: [String],          // Verified facts about people/event
+    verificationSuggestions: [String],
+    // Context search results
+    contextInfo: {
+      peopleInfo: [{
+        name: String,
+        verifiedFacts: [String],
+        commonMisinformation: [String],
+        relevantContext: String
+      }],
+      claimAnalysis: {
+        likelyVerdict: String,
+        confidence: String,
+        reasoning: String
+      },
+      verificationSteps: [String],
+      similarHoaxes: [String]
+    },
+    forensics: {
+      deepfakeDetected: Boolean,
+      manipulationScore: Number,
+      artifacts: [String],
+    },
+  },
 });
 
 claimSchema.index({ text: 'text', canonicalClaim: 'text' });

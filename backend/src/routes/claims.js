@@ -12,7 +12,7 @@ const router = express.Router();
 // Create new claim
 router.post('/', async (req, res, next) => {
   try {
-    const { text, sourceType = 'manual', sourceLink, language = 'en', geo } = req.body;
+    const { text, sourceType = 'manual', sourceLink, language = 'en', geo, mediaAnalysis } = req.body;
 
     if (!text) {
       return res.status(400).json({ error: 'Claim text is required' });
@@ -38,8 +38,8 @@ router.post('/', async (req, res, next) => {
       }
     }
 
-    // Create claim
-    const claim = await Claim.create({
+    // Create claim with optional media analysis
+    const claimData = {
       text,
       canonicalClaim: text,
       sourceType,
@@ -48,7 +48,31 @@ router.post('/', async (req, res, next) => {
       embedding,
       geo,
       status: 'new',
-    });
+    };
+
+    // Add media analysis if provided (with all new fields)
+    if (mediaAnalysis) {
+      claimData.mediaAnalysis = {
+        hasImage: mediaAnalysis.hasImage || false,
+        imagePath: mediaAnalysis.imagePath || '',
+        ocrText: mediaAnalysis.ocrText || '',
+        extractedText: mediaAnalysis.extractedText || '',
+        imageDescription: mediaAnalysis.imageDescription || '',
+        mainClaim: mediaAnalysis.mainClaim || '',
+        context: mediaAnalysis.context || '',
+        concerns: mediaAnalysis.concerns || [],
+        people: mediaAnalysis.people || [],
+        objects: mediaAnalysis.objects || [],
+        scene: mediaAnalysis.scene || {},
+        factCheckContext: mediaAnalysis.factCheckContext || '',
+        knownFacts: mediaAnalysis.knownFacts || [],
+        verificationSuggestions: mediaAnalysis.verificationSuggestions || [],
+        contextInfo: mediaAnalysis.contextInfo || {},
+        forensics: mediaAnalysis.forensics || {},
+      };
+    }
+
+    const claim = await Claim.create(claimData);
 
     // Log audit
     await AuditLog.create({

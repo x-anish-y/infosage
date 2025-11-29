@@ -39,6 +39,9 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(requestLogger);
 app.use(apiLimiter);
 
+// Serve uploaded files statically
+app.use('/uploads', express.static(join(__dirname, '..', 'uploads')));
+
 // Store io instance for routes
 app.locals.io = io;
 
