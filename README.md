@@ -18,6 +18,8 @@ InfoSage ingests claims from multiple sources (text, links, images), automatical
 - ✅ **Reviewer Workflow**: Escalation, resolution, audit trails
 - ✅ **Real-time Updates**: WebSocket notifications for new clusters and analyses
 - ✅ **Multi-language Support**: Hindi, Marathi, English with auto-translation
+<br><br>
+![Ingosage Architecture](frontend/public/0e6acbb1-ba6c-4922-8617-fb40b1203226.jpeg)
 
 ### Dashboard
 - Trending clusters with severity badges
@@ -25,6 +27,8 @@ InfoSage ingests claims from multiple sources (text, links, images), automatical
 - Global filters by language, time range, platform, risk tier
 - Live counters and sparkline charts
 - Drill-down from cluster → claims → detailed analysis
+<br><br>
+![Ingosage Architecture](frontend/public/890cbf87-34b2-4c69-81ae-6db2cc842975.jpeg)
 
 ### Analysis View
 - Verdict percentage (True/False/Mixed/Unverified)
@@ -34,6 +38,10 @@ InfoSage ingests claims from multiple sources (text, links, images), automatical
 - Channel distribution and sentiment analysis
 - OCR text extraction and multimedia forensics
 - Detailed rationale explaining the decision
+<br><br>
+![Ingosage Architecture](frontend/public/fc2c8238-6e6e-4bec-86f6-f26d5b296a5c.jpeg)
+<br><br>
+![Ingosage Architecture](frontend/public/33e86ecf-69ab-4441-9434-3e5a64f1657e.jpeg)
 
 ## Tech Stack
 
@@ -481,3 +489,4 @@ For issues, feature requests, or contributions:
 ## Credits
 
 Built with modern web technologies for crisis fact-checking and rapid misinformation detection.
+
